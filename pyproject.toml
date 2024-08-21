@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "safetextshare"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "AGPL 3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^5.1"
+scikit-learn = "^1.5.1"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
