@@ -11,6 +11,7 @@ python = "^3.11"
 Django = "^5.1"
 scikit-learn = "^1.5.1"
 pandas = "^2.2.2"
+nltk = "^3.9.1"
 
 
 [build-system]
