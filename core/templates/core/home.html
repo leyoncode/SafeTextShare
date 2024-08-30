@@ -1,0 +1,22 @@
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <h1> SafeTextShare</h1>
+    <p> Here you can safely, anonymously share your thoughts and share it with others.</p>
+    <p> Be sure to not include any information that violates the privacy of others. </p>
+    <p> By using this app, you are agreeing to follow the terms of usage as described
+        <a href="/terms_of_usage">here</a>
+    </p>
+    <p> Our privacy policy is clear in what data we collect and store. You can read it
+        <a href="/privacy_policy">here</a>
+    </p>
+
+    <br/><br/><br/>
+
+    <a href="/posts/"><h3>See all posts</h3></a>
+
+    <h3>Create a New Post</h3>
+    {% include 'UserText/post_form.html' %}
+{% endblock %}
