@@ -1,0 +1,373 @@
+2024-08-30 11:02:40.769126 ---- Loading data...
+2024-08-30 11:02:42.209464 ---- Data loaded with 440906 rows and 3 columns.
+2024-08-30 11:02:42.209464 ---- Preprocessing data...
+2024-08-30 11:04:13.950488 ---- Data preprocessing completed.
+2024-08-30 11:04:13.981744 ---- Data split into training and testing sets.
+2024-08-30 11:04:13.981744 ---- Vectorizing text data...
+2024-08-30 11:04:20.381054 ---- Text data vectorized.
+2024-08-30 11:04:20.396741 ---- Training models...
+2024-08-30 11:04:20.396741 ---- Training Random Forest
+2024-08-30 11:44:50.368493 ---- Random Forest model trained. Took 2429.971752166748 seconds.
+2024-08-30 11:44:50.368493 ---- ------------------------------------------------------------------
+2024-08-30 11:44:50.368493 ---- Training Logistic Regression
+2024-08-30 11:44:55.667206 ---- Logistic Regression model trained. Took 5.290949821472168 seconds.
+2024-08-30 11:44:55.677281 ---- ------------------------------------------------------------------
+2024-08-30 11:44:55.677281 ---- Training K-Nearest Neighbors
+2024-08-30 11:44:55.947589 ---- K-Nearest Neighbors model trained. Took 0.2703084945678711 seconds.
+2024-08-30 11:44:55.947589 ---- ------------------------------------------------------------------
+2024-08-30 11:44:55.947589 ---- Training Naive Bayes
+2024-08-30 11:44:56.638184 ---- Naive Bayes model trained. Took 0.6905944347381592 seconds.
+2024-08-30 11:44:56.638184 ---- ------------------------------------------------------------------
+2024-08-30 11:44:56.638184 ---- Training XGBoost
+2024-08-30 11:51:21.637769 ---- Loading data...
+2024-08-30 11:51:23.139121 ---- Data loaded with 440906 rows and 3 columns.
+2024-08-30 11:51:55.745920 ---- Loading data...
+2024-08-30 11:51:57.248694 ---- Data loaded with 440906 rows and 3 columns.
+2024-08-30 11:51:57.248694 ---- Preprocessing data...
+2024-08-30 11:53:36.324495 ---- Data preprocessing completed.
+2024-08-30 11:53:36.355159 ---- Data split into training and testing sets.
+2024-08-30 11:53:36.355159 ---- Vectorizing text data...
+2024-08-30 11:53:42.798190 ---- Text data vectorized.
+2024-08-30 12:01:56.470437 ---- Loading data...
+2024-08-30 12:01:58.020106 ---- Data loaded with 440906 rows and 3 columns.
+2024-08-30 12:01:58.020106 ---- Preprocessing data...
+2024-08-30 12:03:35.934968 ---- Data preprocessing completed.
+2024-08-30 12:03:35.950595 ---- Data split into training and testing sets.
+2024-08-30 12:07:15.611631 ---- Loading data...
+2024-08-30 12:07:17.102709 ---- Data loaded with 440906 rows and 3 columns.
+2024-08-30 12:09:41.998066 ---- Loading data...
+2024-08-30 12:09:43.500634 ---- Data loaded with 440906 rows and 3 columns.
+2024-08-30 12:19:22.963633 ---- Loading data...
+2024-08-30 12:19:36.110774 ---- Loading data...
+2024-08-30 12:19:37.729294 ---- Data loaded with 440899 rows and 3 columns.
+2024-08-30 12:20:12.972961 ---- Loading data...
+2024-08-30 12:20:14.606729 ---- Data loaded with 440899 rows and 3 columns.
+2024-08-30 12:20:14.606729 ---- Preprocessing data...
+2024-08-30 12:21:46.768756 ---- Data preprocessing completed.
+2024-08-30 12:21:46.832564 ---- Data split into training and testing sets.
+2024-08-30 12:30:20.156207 ---- Loading data...
+2024-08-30 12:30:21.747630 ---- Data loaded with 440899 rows and 3 columns.
+2024-08-30 12:30:21.748661 ---- Preprocessing data...
+2024-08-30 12:31:53.953841 ---- Data preprocessing completed.
+2024-08-30 12:31:53.985066 ---- Data have been split into training and testing sets.
+2024-08-30 12:31:53.985066 ---- Vectorizing text data...
+2024-08-30 12:31:59.571701 ---- Text data vectorized.
+2024-08-30 12:31:59.571701 ---- Training models...
+2024-08-30 12:31:59.571701 ---- Training Random Forest
+2024-08-30 13:11:50.324173 ---- Random Forest model trained. Took 2390.752471446991 seconds.
+2024-08-30 13:11:50.324173 ---- ------------------------------------------------------------------
+2024-08-30 13:11:50.324173 ---- Training Logistic Regression
+2024-08-30 13:11:52.046683 ---- Logistic Regression model trained. Took 1.7225103378295898 seconds.
+2024-08-30 13:11:52.062304 ---- ------------------------------------------------------------------
+2024-08-30 13:11:52.062304 ---- Training K-Nearest Neighbors
+2024-08-30 13:11:52.093616 ---- K-Nearest Neighbors model trained. Took 0.031311988830566406 seconds.
+2024-08-30 13:11:52.093616 ---- ------------------------------------------------------------------
+2024-08-30 13:11:52.093616 ---- Training Naive Bayes
+2024-08-30 13:11:52.156217 ---- Naive Bayes model trained. Took 0.06260085105895996 seconds.
+2024-08-30 13:11:52.156217 ---- ------------------------------------------------------------------
+2024-08-30 13:11:52.156217 ---- Training XGBoost
+2024-08-30 13:12:36.572976 ---- XGBoost model trained. Took 44.4167594909668 seconds.
+2024-08-30 13:12:36.572976 ---- ------------------------------------------------------------------
+2024-08-30 13:12:36.572976 ---- Evaluating models...
+2024-08-30 13:12:50.307208 ---- 
+
+Model #0, Random Forest have been evaluated. Took 13.734232187271118 seconds.
+2024-08-30 13:12:50.307208 ---- 
+Random Forest Model Accuracy: 0.8763
+2024-08-30 13:12:50.307208 ---- Classification Report:
+2024-08-30 13:12:50.338860 ----               precision    recall  f1-score   support
+
+           0       0.90      0.95      0.93     72346
+           1       0.71      0.53      0.61     15834
+
+    accuracy                           0.88     88180
+   macro avg       0.81      0.74      0.77     88180
+weighted avg       0.87      0.88      0.87     88180
+
+2024-08-30 13:12:50.338860 ---- Confusion Matrix:
+2024-08-30 13:12:50.338860 ---- [[68901  3445]
+ [ 7461  8373]]
+2024-08-30 13:12:50.354496 ---- 
+
+Model #1, Logistic Regression have been evaluated. Took 0.01563549041748047 seconds.
+2024-08-30 13:12:50.354496 ---- 
+Logistic Regression Model Accuracy: 0.8657
+2024-08-30 13:12:50.354496 ---- Classification Report:
+2024-08-30 13:12:50.385760 ----               precision    recall  f1-score   support
+
+           0       0.89      0.96      0.92     72346
+           1       0.69      0.45      0.55     15834
+
+    accuracy                           0.87     88180
+   macro avg       0.79      0.70      0.73     88180
+weighted avg       0.85      0.87      0.85     88180
+
+2024-08-30 13:12:50.385760 ---- Confusion Matrix:
+2024-08-30 13:12:50.385760 ---- [[69194  3152]
+ [ 8691  7143]]
+2024-08-30 13:20:48.597858 ---- 
+
+Model #2, K-Nearest Neighbors have been evaluated. Took 478.2120985984802 seconds.
+2024-08-30 13:20:48.597858 ---- 
+K-Nearest Neighbors Model Accuracy: 0.8147
+2024-08-30 13:20:48.597858 ---- Classification Report:
+2024-08-30 13:20:48.613538 ----               precision    recall  f1-score   support
+
+           0       0.87      0.91      0.89     72346
+           1       0.48      0.37      0.42     15834
+
+    accuracy                           0.81     88180
+   macro avg       0.67      0.64      0.65     88180
+weighted avg       0.80      0.81      0.81     88180
+
+2024-08-30 13:20:48.613538 ---- Confusion Matrix:
+2024-08-30 13:20:48.629152 ---- [[65961  6385]
+ [ 9958  5876]]
+2024-08-30 13:20:48.644786 ---- 
+
+Model #3, Naive Bayes have been evaluated. Took 0.01563286781311035 seconds.
+2024-08-30 13:20:48.644786 ---- 
+Naive Bayes Model Accuracy: 0.8546
+2024-08-30 13:20:48.644786 ---- Classification Report:
+2024-08-30 13:20:48.675967 ----               precision    recall  f1-score   support
+
+           0       0.88      0.95      0.91     72346
+           1       0.65      0.41      0.51     15834
+
+    accuracy                           0.85     88180
+   macro avg       0.77      0.68      0.71     88180
+weighted avg       0.84      0.85      0.84     88180
+
+2024-08-30 13:20:48.675967 ---- Confusion Matrix:
+2024-08-30 13:20:48.691673 ---- [[68805  3541]
+ [ 9280  6554]]
+2024-08-30 13:20:48.802535 ---- 
+
+Model #4, XGBoost have been evaluated. Took 0.11086249351501465 seconds.
+2024-08-30 13:20:48.802535 ---- 
+XGBoost Model Accuracy: 0.8473
+2024-08-30 13:20:48.802535 ---- Classification Report:
+2024-08-30 13:20:48.833789 ----               precision    recall  f1-score   support
+
+           0       0.85      0.99      0.91     72346
+           1       0.78      0.21      0.33     15834
+
+    accuracy                           0.85     88180
+   macro avg       0.81      0.60      0.62     88180
+weighted avg       0.84      0.85      0.81     88180
+
+2024-08-30 13:20:48.833789 ---- Confusion Matrix:
+2024-08-30 13:20:48.849414 ---- [[71391   955]
+ [12509  3325]]
+2024-08-30 13:20:48.849414 ---- Model evaluation completed.
+2024-08-30 13:20:48.849414 ---- ------------------------------------------------------------------
+2024-08-30 13:20:48.849414 ---- Which models do you want to save?
+2024-08-30 13:20:48.849414 ---- 0) Random Forest
+2024-08-30 13:20:48.849414 ---- 1) Logistic Regression
+2024-08-30 13:20:48.849414 ---- 2) K-Nearest Neighbors
+2024-08-30 13:20:48.849414 ---- 3) Naive Bayes
+2024-08-30 13:20:48.849414 ---- 4) XGBoost
+2024-08-30 13:26:40.178754 ---- Saving model Naive Bayes...MultinomialNB()
+2024-08-30 17:39:22.657459 ---- Loading data...
+2024-08-30 17:39:23.941195 ---- Data loaded with 690102 rows and 2 columns.
+2024-08-30 17:39:23.941195 ---- Preprocessing data...
+2024-08-30 17:41:10.480109 ---- Loading data...
+2024-08-30 17:41:11.716346 ---- Data loaded with 690102 rows and 2 columns.
+2024-08-30 17:41:11.716346 ---- Preprocessing data...
+2024-08-30 17:42:43.863441 ---- Data preprocessing completed.
+2024-08-30 17:42:43.957812 ---- Data have been split into training and testing sets.
+2024-08-30 17:42:43.957812 ---- Vectorizing text data...
+2024-08-30 17:42:51.843270 ---- Text data vectorized.
+2024-08-30 17:42:51.843270 ---- Training models...
+2024-08-30 17:42:51.843270 ---- Training Logistic Regression
+2024-08-30 17:42:52.711158 ---- Logistic Regression model trained. Took 0.8678874969482422 seconds.
+2024-08-30 17:42:52.711158 ---- ------------------------------------------------------------------
+2024-08-30 17:42:52.711158 ---- Training K-Nearest Neighbors
+2024-08-30 17:42:52.735828 ---- K-Nearest Neighbors model trained. Took 0.024669885635375977 seconds.
+2024-08-30 17:42:52.735828 ---- ------------------------------------------------------------------
+2024-08-30 17:42:52.735828 ---- Training Naive Bayes
+2024-08-30 17:42:52.798386 ---- Naive Bayes model trained. Took 0.06255769729614258 seconds.
+2024-08-30 17:42:52.798386 ---- ------------------------------------------------------------------
+2024-08-30 17:42:52.798386 ---- Training XGBoost
+2024-08-30 17:43:42.818506 ---- XGBoost model trained. Took 50.02012062072754 seconds.
+2024-08-30 17:43:42.818506 ---- ------------------------------------------------------------------
+2024-08-30 17:43:42.818506 ---- Evaluating models...
+2024-08-30 17:43:42.818506 ---- 
+
+Model #0, Logistic Regression have been evaluated. Took 0.0 seconds.
+2024-08-30 17:43:42.834141 ---- 
+Logistic Regression Model Accuracy: 0.8026
+2024-08-30 17:43:42.834141 ---- Classification Report:
+2024-08-30 17:43:42.897021 ----               precision    recall  f1-score   support
+
+           0       0.80      0.83      0.81     72193
+           1       0.80      0.78      0.79     65828
+
+    accuracy                           0.80    138021
+   macro avg       0.80      0.80      0.80    138021
+weighted avg       0.80      0.80      0.80    138021
+
+2024-08-30 17:43:42.897021 ---- Confusion Matrix:
+2024-08-30 17:43:42.912640 ---- [[59711 12482]
+ [14759 51069]]
+2024-08-30 18:04:21.926432 ---- 
+
+Model #1, K-Nearest Neighbors have been evaluated. Took 1239.0137920379639 seconds.
+2024-08-30 18:04:21.926432 ---- 
+K-Nearest Neighbors Model Accuracy: 0.6594
+2024-08-30 18:04:21.926432 ---- Classification Report:
+2024-08-30 18:04:22.000620 ----               precision    recall  f1-score   support
+
+           0       0.88      0.40      0.55     72193
+           1       0.59      0.94      0.73     65828
+
+    accuracy                           0.66    138021
+   macro avg       0.74      0.67      0.64    138021
+weighted avg       0.74      0.66      0.63    138021
+
+2024-08-30 18:04:22.000620 ---- Confusion Matrix:
+2024-08-30 18:04:22.016240 ---- [[29042 43151]
+ [ 3859 61969]]
+2024-08-30 18:04:22.031807 ---- 
+
+Model #2, Naive Bayes have been evaluated. Took 0.015567302703857422 seconds.
+2024-08-30 18:04:22.047493 ---- 
+Naive Bayes Model Accuracy: 0.7746
+2024-08-30 18:04:22.047493 ---- Classification Report:
+2024-08-30 18:04:22.109989 ----               precision    recall  f1-score   support
+
+           0       0.80      0.76      0.78     72193
+           1       0.75      0.80      0.77     65828
+
+    accuracy                           0.77    138021
+   macro avg       0.78      0.78      0.77    138021
+weighted avg       0.78      0.77      0.77    138021
+
+2024-08-30 18:04:22.109989 ---- Confusion Matrix:
+2024-08-30 18:04:22.125614 ---- [[54514 17679]
+ [13425 52403]]
+2024-08-30 18:04:22.204283 ---- 
+
+Model #3, XGBoost have been evaluated. Took 0.07866859436035156 seconds.
+2024-08-30 18:04:22.219908 ---- 
+XGBoost Model Accuracy: 0.7496
+2024-08-30 18:04:22.219908 ---- Classification Report:
+2024-08-30 18:04:22.313660 ----               precision    recall  f1-score   support
+
+           0       0.71      0.87      0.78     72193
+           1       0.81      0.62      0.70     65828
+
+    accuracy                           0.75    138021
+   macro avg       0.76      0.74      0.74    138021
+weighted avg       0.76      0.75      0.74    138021
+
+2024-08-30 18:04:22.313660 ---- Confusion Matrix:
+2024-08-30 18:04:22.329366 ---- [[62789  9404]
+ [25163 40665]]
+2024-08-30 18:04:22.329366 ---- Model evaluation completed.
+2024-08-30 18:04:22.329366 ---- ------------------------------------------------------------------
+2024-08-30 18:04:22.329366 ---- Which models do you want to save?
+2024-08-30 18:04:22.329366 ---- 0) Logistic Regression
+2024-08-30 18:04:22.329366 ---- 1) K-Nearest Neighbors
+2024-08-30 18:04:22.329366 ---- 2) Naive Bayes
+2024-08-30 18:04:22.329366 ---- 3) XGBoost
+2024-08-30 18:07:08.141517 ---- Saving model Naive Bayes...MultinomialNB()
+2024-08-30 18:12:22.389566 ---- Loading data...
+2024-08-30 18:12:23.906666 ---- Data loaded with 690102 rows and 2 columns.
+2024-08-30 18:12:23.906666 ---- Preprocessing data...
+2024-08-30 18:14:55.495697 ---- Data preprocessing completed.
+2024-08-30 18:14:55.605276 ---- Data have been split into training and testing sets.
+2024-08-30 18:14:55.605276 ---- Vectorizing text data...
+2024-08-30 18:15:04.296611 ---- Text data vectorized.
+2024-08-30 18:15:04.312313 ---- Training models...
+2024-08-30 18:15:04.312313 ---- Training Logistic Regression
+2024-08-30 18:15:05.204845 ---- Logistic Regression model trained. Took 0.8925323486328125 seconds.
+2024-08-30 18:15:05.204845 ---- ------------------------------------------------------------------
+2024-08-30 18:15:05.204845 ---- Training K-Nearest Neighbors
+2024-08-30 18:15:05.236169 ---- K-Nearest Neighbors model trained. Took 0.03132462501525879 seconds.
+2024-08-30 18:15:05.236169 ---- ------------------------------------------------------------------
+2024-08-30 18:15:05.236169 ---- Training Naive Bayes
+2024-08-30 18:15:05.330126 ---- Naive Bayes model trained. Took 0.09395647048950195 seconds.
+2024-08-30 18:15:05.330126 ---- ------------------------------------------------------------------
+2024-08-30 18:15:05.330126 ---- Training XGBoost
+2024-08-30 18:15:58.671418 ---- XGBoost model trained. Took 53.341291666030884 seconds.
+2024-08-30 18:15:58.671418 ---- ------------------------------------------------------------------
+2024-08-30 18:15:58.671418 ---- Evaluating models...
+2024-08-30 18:15:58.687058 ---- 
+
+Model #0, Logistic Regression have been evaluated. Took 0.0156402587890625 seconds.
+2024-08-30 18:15:58.687058 ---- 
+Logistic Regression Model Accuracy: 0.8045
+2024-08-30 18:15:58.687058 ---- Classification Report:
+2024-08-30 18:15:58.749605 ----               precision    recall  f1-score   support
+
+           0       0.80      0.83      0.82     72193
+           1       0.80      0.78      0.79     65828
+
+    accuracy                           0.80    138021
+   macro avg       0.80      0.80      0.80    138021
+weighted avg       0.80      0.80      0.80    138021
+
+2024-08-30 18:15:58.749605 ---- Confusion Matrix:
+2024-08-30 18:15:58.765178 ---- [[59714 12479]
+ [14504 51324]]
+2024-08-30 18:37:31.486783 ---- 
+
+Model #1, K-Nearest Neighbors have been evaluated. Took 1292.721604347229 seconds.
+2024-08-30 18:37:31.486783 ---- 
+K-Nearest Neighbors Model Accuracy: 0.6609
+2024-08-30 18:37:31.486783 ---- Classification Report:
+2024-08-30 18:37:31.565267 ----               precision    recall  f1-score   support
+
+           0       0.89      0.40      0.55     72193
+           1       0.59      0.94      0.73     65828
+
+    accuracy                           0.66    138021
+   macro avg       0.74      0.67      0.64    138021
+weighted avg       0.74      0.66      0.64    138021
+
+2024-08-30 18:37:31.565267 ---- Confusion Matrix:
+2024-08-30 18:37:31.580969 ---- [[29181 43012]
+ [ 3789 62039]]
+2024-08-30 18:37:31.596525 ---- 
+
+Model #2, Naive Bayes have been evaluated. Took 0.015555143356323242 seconds.
+2024-08-30 18:37:31.596525 ---- 
+Naive Bayes Model Accuracy: 0.7759
+2024-08-30 18:37:31.596525 ---- Classification Report:
+2024-08-30 18:37:31.674713 ----               precision    recall  f1-score   support
+
+           0       0.80      0.76      0.78     72193
+           1       0.75      0.80      0.77     65828
+
+    accuracy                           0.78    138021
+   macro avg       0.78      0.78      0.78    138021
+weighted avg       0.78      0.78      0.78    138021
+
+2024-08-30 18:37:31.674713 ---- Confusion Matrix:
+2024-08-30 18:37:31.674713 ---- [[54542 17651]
+ [13279 52549]]
+2024-08-30 18:37:31.769114 ---- 
+
+Model #3, XGBoost have been evaluated. Took 0.09440040588378906 seconds.
+2024-08-30 18:37:31.785597 ---- 
+XGBoost Model Accuracy: 0.7583
+2024-08-30 18:37:31.785597 ---- Classification Report:
+2024-08-30 18:37:31.879841 ----               precision    recall  f1-score   support
+
+           0       0.73      0.86      0.79     72193
+           1       0.81      0.64      0.72     65828
+
+    accuracy                           0.76    138021
+   macro avg       0.77      0.75      0.75    138021
+weighted avg       0.77      0.76      0.75    138021
+
+2024-08-30 18:37:31.879841 ---- Confusion Matrix:
+2024-08-30 18:37:31.895479 ---- [[62385  9808]
+ [23548 42280]]
+2024-08-30 18:37:31.895479 ---- Model evaluation completed.
+2024-08-30 18:37:31.895479 ---- ------------------------------------------------------------------
+2024-08-30 18:37:31.895479 ---- Saving model to saved_model.pkl_Logistic Regression.pkl
+2024-08-30 18:37:31.895479 ---- Saving model to saved_model.pkl_K-Nearest Neighbors.pkl
+2024-08-30 18:37:32.020478 ---- Saving model to saved_model.pkl_Naive Bayes.pkl
+2024-08-30 18:37:32.020478 ---- Saving model to saved_model.pkl_XGBoost.pkl
