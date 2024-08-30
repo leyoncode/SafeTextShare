@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+  <h1>Text Post</h1>
+  <p>{{ post.text }}</p>
+  <p>Expires on: {{ post.expiry_date }}</p>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    All Posts
+{% endblock %}
+
+{% block content %}
+  <h1>All Active Posts</h1>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <a href="{% url 'view_post' post.id %}">{{ post.text|truncatewords:50 }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
