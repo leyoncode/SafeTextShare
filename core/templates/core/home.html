@@ -5,19 +5,26 @@
 {% endblock %}
 
 {% block content %}
-    <h1> SafeTextShare</h1>
-    <p> Here you can safely, anonymously share your thoughts and share it with others.</p>
-    <p> Be sure to not include any information that violates the privacy of others. </p>
-    <p> By using this app, you are agreeing to follow the terms of usage as described
-        <a href="/terms-of-usage">here</a>
-    </p>
-    <p> Our privacy policy is clear in what data we collect and store. You can read it
-        <a href="/privacy-policy">here</a>
-    </p>
+    <h1>Welcome to SafeTextShare</h1>
 
-    <br/><br/><br/>
+    <div class="intro-text">
+        <p>Share your thoughts anonymously and securely.<br> All posts are temporary and will be automatically deleted after 3 days.</p>
+        <p>Please keep your posts respectful and avoid sharing private information about others.</p>
+        <p>By using SafeTextShare, you agree to our <a href="{% url 'terms_of_usage' %}">Terms of Use</a> and <a href="{% url 'privacy_policy' %}">Privacy Policy</a>.</p>
+    </div>
 
-    <a href="/posts/"><h3>See all posts</h3></a>
+    <br/><br/>
+
+    <!-- Display Django Messages -->
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <a href="{% url 'all_posts' %}" class="button">View All Posts</a>
 
     <h3>Create a New Post</h3>
     {% include 'UserText/post_form.html' %}

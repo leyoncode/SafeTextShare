@@ -1,11 +1,40 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-
+    Text Post
 {% endblock %}
 
 {% block content %}
-  <h1>Text Post</h1>
-  <p>{{ post.text }}</p>
-  <p>Expires on: {{ post.expiry_date }}</p>
+    <div class="single-post-view">
+        <p class="single-post-text">{{ post.text }}</p>
+        <br><hr>
+        <p class="single-post-expiry">Expires on: {{ post.expiry_date }}</p>
+        <hr>
+        <button class="copy-btn" onclick="copyToClipboard()">Copy URL to Clipboard</button>
+        <p id="copy-feedback" class="copy-feedback" style="display:none;">URL copied to clipboard!</p>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script>
+        function copyToClipboard() {
+            // Create a temporary input element to hold the URL
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = window.location.href; // Get current page URL
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Show feedback message
+            const feedback = document.getElementById('copy-feedback');
+            feedback.style.display = 'block';
+
+            // Hide feedback after a short delay
+            setTimeout(() => {
+                feedback.style.display = 'none';
+            }, 2000);
+        }
+    </script>
 {% endblock %}

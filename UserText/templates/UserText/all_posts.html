@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block content %}
-  <h1>All Active Posts</h1>
-  <ul>
-    {% for post in posts %}
-      <li>
-        <a href="{% url 'view_post' post.id %}">{{ post.text|truncatewords:50 }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    <h1>All Active Posts</h1>
+    <div class="posts-container">
+        {% for post in posts %}
+            <div class="post-card">
+                <a href="{% url 'view_post' post.id %}">
+                    <p>{{ post.text|truncatewords:50 }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

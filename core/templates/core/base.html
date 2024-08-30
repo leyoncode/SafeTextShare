@@ -2,13 +2,283 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %} {% endblock %} | SafeTextShare
     </title>
+    <style>
+        /* Basic reset and styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #1f1f1f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: #333333;
+            border-radius: 4px;
+        }
+
+        .navbar .brand-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Main content area */
+        .main-content {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* Home page content styling */
+        h1 {
+            font-size: 36px;
+            color: #00897B; /* Teal for main heading */
+            margin-bottom: 20px;
+        }
+
+        .intro-text p {
+            font-size: 16px; /* Reduced font size */
+            line-height: 1.4; /* Adjusted line height for compactness */
+            color: #bbbbbb;
+            margin-bottom: 10px; /* Smaller margin between paragraphs */
+        }
+
+        a {
+            color: #00897B; /* Teal for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #00897B; /* Teal for button */
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #00695c; /* Darker teal on hover */
+        }
+
+        h3 {
+            color: #ffffff;
+            margin-top: 40px;
+        }
+
+        /* Form styling */
+        form {
+            margin: 20px auto; /* Ensures form is centered and has vertical space */
+            padding: 20px;
+            max-width: 600px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            margin-bottom: 15px; /* Adds margin to the bottom of the text area */
+            resize: vertical;
+        }
+
+        button {
+            background-color: #00897B; /* Teal for submit button */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px; /* Margin above the button */
+            display: block; /* Makes the button take up the full width of its container */
+            width: 100%; /* Full width button */
+            max-width: 150px; /* Limit max width to make it look better */
+            margin-left: auto;
+            margin-right: auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: #00695c; /* Darker teal on hover */
+        }
+
+        /* All Posts View Styling */
+        .posts-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .post-card {
+            background-color: #1f1f1f; /* Dark background for card */
+            border-radius: 8px;
+            padding: 15px 20px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .post-card:hover {
+            background-color: #292929; /* Slightly lighter on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .post-card p {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        /* View Single Post Styling */
+        .single-post-view {
+            background-color: #2b2b2b; /* Slightly different background for the single post view */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .single-post-text {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .single-post-expiry {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        /* Styling for Copy Button */
+        .copy-btn {
+            background-color: #00897B;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 10px;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover {
+            background-color: #00695c;
+        }
+
+        /* Feedback message styling */
+        .copy-feedback {
+            color: #76ff03; /* Light green to indicate success */
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Cookie Notice Styling */
+        .cookie-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .cookie-btn {
+            margin: auto;
+            background-color: #00897B;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .cookie-btn:hover {
+            background-color: #00695c;
+        }
+
+    </style>
 </head>
 <body>
 
-{% block content %}
+<!-- Navbar -->
+<div class="navbar">
+    <a href="{% url 'home' %}" class="brand-logo">SafeTextShare</a>
+    <!-- Additional navbar items can go here -->
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Cookie Notice -->
+<div id="cookie-notice" class="cookie-notice" style="display: none;">
+    <p>We use cookies to ensure you get the best experience on our website. By continuing to browse the site, you agree to our use of cookies. For more information, please read our <a href="{% url 'privacy_policy' %}" style="color: #76ff03;">Privacy Policy</a>.</p>
+    <button id="accept-cookies" class="cookie-btn">Accept Cookies</button>
+</div>
+
+{% block extra_js %}
+    {{ block.super }}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cookieNotice = document.getElementById('cookie-notice');
+            const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+            // Check if the user has already accepted cookies
+            if (!localStorage.getItem('cookiesAccepted')) {
+                cookieNotice.style.display = 'block';
+            }
+
+            // Set a cookie when the user accepts
+            acceptCookiesBtn.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieNotice.style.display = 'none';
+            });
+        });
+    </script>
 {% endblock %}
 
 </body>
