@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import time
 import pickle
 import pandas as pd
@@ -25,6 +27,7 @@ nltk.download('omw-1.4')
 TEXT_COLUMN = 'tweet'
 LABEL_COLUMN = 'label'
 CLEANED_TEXT_COLUMN = 'cleaned_text'
+VECTORIZER_SAVE_PATH = 'vectorizer.pkl'
 SAVE_FILE_NAME = 'saved_model.pkl'
 
 def load_data(file_path):
@@ -64,6 +67,11 @@ def vectorize_text(train_texts, test_texts):
     X_train = vectorizer.fit_transform(train_texts)
     X_test = vectorizer.transform(test_texts)
     print("Text data vectorized.")
+
+    #save vectorizer for use in django
+    with open(VECTORIZER_SAVE_PATH, 'wb') as vec_file:
+        pickle.dump(vectorizer, vec_file)
+
     return X_train, X_test
 
 def train_models(X_train, y_train):
