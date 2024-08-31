@@ -1,9 +1,10 @@
+from django.core.validators import MinLengthValidator
 from django.db import models
 from django.utils import timezone
 from datetime import timedelta
 
 class UserText(models.Model):
-    text = models.TextField()
+    text = models.TextField(validators=[MinLengthValidator(10)])
     expiry_date = models.DateTimeField(default=timezone.now() + timedelta(days=3)) #set expiry date 3 days after  posting
     ip_address = models.GenericIPAddressField()
 
