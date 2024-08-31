@@ -209,6 +209,73 @@
             margin-top: 10px;
         }
 
+        .messages {
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .errorlist {
+            padding: 0;
+            margin: 10px 0;
+            list-style-type: none; /* Removes the bullet points */
+        }
+
+        .errorlist li {
+            background-color: #f8d7da; /* Light red background for error message */
+            color: #721c24; /* Dark red text for better readability */
+            border: 1px solid #f5c6cb; /* Border color similar to the background */
+            border-radius: 4px; /* Rounded corners for the error message box */
+            padding: 8px; /* Padding around the error message */
+            margin-bottom: 5px; /* Space between multiple error messages */
+            font-size: 14px; /* Adjust font size */
+            font-weight: bold; /* Bold text for emphasis */
+        }
+
+        /* Ensures the error message aligns well with other elements */
+        form .errorlist {
+            margin-left: 0; /* Align error messages with form inputs */
+        }
+
+        .alert {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .alert.success {
+            background-color: #4CAF50; /* Green for success */
+            color: white;
+        }
+
+        .alert.error {
+            background-color: #f44336; /* Red for error */
+            color: white;
+        }
+
+        .alert.info {
+            background-color: #2196F3; /* Blue for info */
+            color: white;
+        }
+
+        .alert.warning {
+            background-color: #ff9800; /* Orange for warning */
+            color: white;
+        }
+
+        .info-notice {
+            background-color: #424242; /* Dark gray background to blend with dark theme */
+            color: #e0e0e0; /* Light gray text for readability */
+            border: 1px solid #616161; /* Slightly lighter gray border */
+            border-radius: 4px; /* Rounded corners for a softer look */
+            padding: 15px; /* Padding inside the box to ensure text doesn't touch the edges */
+            margin: 20px 0; /* Vertical space before and after the notice */
+            font-size: 14px; /* Font size to ensure readability */
+            font-weight: normal; /* Normal weight for easy reading */
+            text-align: left; /* Align text to the left for readability */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for a raised effect */
+        }
+
+
         /* Cookie Notice Styling */
         .cookie-notice {
             position: fixed;
@@ -241,45 +308,53 @@
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="{% url 'home' %}" class="brand-logo">SafeTextShare</a>
+        <!-- Additional navbar items can go here -->
+    </div>
 
-<!-- Navbar -->
-<div class="navbar">
-    <a href="{% url 'home' %}" class="brand-logo">SafeTextShare</a>
-    <!-- Additional navbar items can go here -->
-</div>
+    <!-- Main Content -->
+    <div class="main-content">
+        {% block content %}
+        {% endblock %}
 
-<!-- Main Content -->
-<div class="main-content">
-    {% block content %}
-    {% endblock %}
-</div>
+        <!-- Display Django Messages -->
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
 
-<!-- Cookie Notice -->
-<div id="cookie-notice" class="cookie-notice" style="display: none;">
-    <p>We use cookies to ensure you get the best experience on our website. By continuing to browse the site, you agree to our use of cookies. For more information, please read our <a href="{% url 'privacy_policy' %}" style="color: #76ff03;">Privacy Policy</a>.</p>
-    <button id="accept-cookies" class="cookie-btn">Accept Cookies</button>
-</div>
+    <!-- Cookie Notice -->
+    <div id="cookie-notice" class="cookie-notice" style="display: none;">
+        <p>We use cookies to ensure you get the best experience on our website. By continuing to browse the site, you agree to our use of cookies. For more information, please read our <a href="{% url 'privacy_policy' %}" style="color: #76ff03;">Privacy Policy</a>.</p>
+        <button id="accept-cookies" class="cookie-btn">Accept Cookies</button>
+    </div>
 
-{% block extra_js %}
-    {{ block.super }}
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cookieNotice = document.getElementById('cookie-notice');
-            const acceptCookiesBtn = document.getElementById('accept-cookies');
+    {% block extra_js %}
+        {{ block.super }}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const cookieNotice = document.getElementById('cookie-notice');
+                const acceptCookiesBtn = document.getElementById('accept-cookies');
 
-            // Check if the user has already accepted cookies
-            if (!localStorage.getItem('cookiesAccepted')) {
-                cookieNotice.style.display = 'block';
-            }
+                // Check if the user has already accepted cookies
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    cookieNotice.style.display = 'block';
+                }
 
-            // Set a cookie when the user accepts
-            acceptCookiesBtn.addEventListener('click', function() {
-                localStorage.setItem('cookiesAccepted', 'true');
-                cookieNotice.style.display = 'none';
+                // Set a cookie when the user accepts
+                acceptCookiesBtn.addEventListener('click', function() {
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    cookieNotice.style.display = 'none';
+                });
             });
-        });
-    </script>
-{% endblock %}
+        </script>
+    {% endblock %}
 
 </body>
 </html>

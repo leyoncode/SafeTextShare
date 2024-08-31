@@ -11,21 +11,16 @@
         <p>Share your thoughts anonymously and securely.<br> All posts are temporary and will be automatically deleted after 3 days.</p>
         <p>Please keep your posts respectful and avoid sharing private information about others.</p>
         <p>By using SafeTextShare, you agree to our <a href="{% url 'terms_of_usage' %}">Terms of Use</a> and <a href="{% url 'privacy_policy' %}">Privacy Policy</a>.</p>
+        <p class="info-notice">Note: All posts will be scanned by our AI system. It may cause some false positives or false negatives.
+            We apologize in advance and would like to mention that we are continuously trying to improve our models.
+            Thank you for understanding.</p>
     </div>
 
     <br/><br/>
-
-    <!-- Display Django Messages -->
-    {% if messages %}
-        <div class="messages">
-            {% for message in messages %}
-                <div class="alert {{ message.tags }}">{{ message }}</div>
-            {% endfor %}
-        </div>
-    {% endif %}
 
     <a href="{% url 'all_posts' %}" class="button">View All Posts</a>
 
     <h3>Create a New Post</h3>
     {% include 'UserText/post_form.html' %}
+
 {% endblock %}
